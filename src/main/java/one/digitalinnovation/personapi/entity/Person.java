@@ -17,7 +17,6 @@ import java.util.List;
 
 /**
  * @author Fellipe Toledo
- * @created 03/01/2022
  */
 
 @Entity
@@ -31,7 +30,7 @@ public class Person {
     private Long id;
 
     @Column(nullable = false)
-    private String firtName;
+    private String firstName;
 
     @Column(nullable = false)
     private String lastName;
@@ -43,7 +42,5 @@ public class Person {
 
     @OneToMany(fetch = FetchType.LAZY, cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE})
     private List<Phone> phones;
-
-
 
 }
